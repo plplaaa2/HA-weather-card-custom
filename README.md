@@ -13,14 +13,17 @@ weather-card-custom(feat' naver weather)
 
 **설치방법**
 
-HA/www/weather-card/weather-card.js 파일 교체
+1. HACS -> frontend -> + explorer -> weather-card 설치
 
-**적용방법**
+2. /homeassistant/www/community/weather-card/weather-card.js 파일 교체
 
-대쉬보드 -> 편집 -> 리소스 관리 -> /hacsfiles/weather-card/weather-card.js?hacstag=192732636150 <- 숫자 하나 더 추가
+**쉬운 적용방법**
+
+대쉬보드 -> 편집 -> 리소스 관리 -> 예) /hacsfiles/weather-card/weather-card.js?hacstag=192732636150 <- 숫자 하나 더 추가
+※ 브라우저 캐시 삭제 안해도 됩니다.
 
 **주의사항**
 
-기본 센서 값은 'sensor.naver-' 로 되어 있기 때문에 한글을 영문으로 쓴 센서일 경우
+기본 센서 값이 'sensor.naver~' 로 되어 있기 때문에 한글을 영문으로 쓴 센서일 경우
 
 기기 및 서비스 -> 네이버 날씨 -> 구성요소에 들어가 센서 값을 'sensor.naver~' 로 다시 수정하는 걸 권장함.
