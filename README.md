@@ -19,6 +19,11 @@ weather-card-custom(feat' naver weather) [![Hits](https://hits.seeyoufarm.com/ap
 비 올때
 
 
+**Change Log**
+
+| Version | Date        | 내용              |
+| :-----: | :---------: | --------------------------------------------------------------------------------------- |
+| v1.0.0  | 2024.04.25  | First version  |
 
 # 주의사항
 
