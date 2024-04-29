@@ -48,7 +48,9 @@ weather-card-custom(feat' naver weather) [![Hits](https://hits.seeyoufarm.com/ap
 대쉬보드 -> 편집 -> 리소스 관리 -> 예) /hacsfiles/weather-card/weather-card.js?hacstag=192732636150 <- 숫자 하나 더 추가
 <br>※ 브라우저 캐시 삭제 안해도 됩니다.
 
+**Special Thanks**
 
+HACS 네이버 날씨 제작자 miumida님
 
 
 
