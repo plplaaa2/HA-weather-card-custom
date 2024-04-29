@@ -19,6 +19,11 @@ weather-card-custom(feat' naver weather) [![Hits](https://hits.seeyoufarm.com/ap
 비 올때
 
 
+**Special Thanks**
+
+HACS 네이버 날씨 제작자 miumida님
+<br>
+
 **Change Log**
 
 | Version | Date        | 내용              |
@@ -37,20 +42,18 @@ weather-card-custom(feat' naver weather) [![Hits](https://hits.seeyoufarm.com/ap
 **Manual**
 
 1. 네이버 날씨 설치 (https://github.com/miumida/naver_weather)
-
 2. Weather-card 설치 ( HACS -> frontend -> + explorer -> weather-card 설치)
-
 3. /homeassistant/www/community/weather-card/weather-card.js 파일 교체
 
 
 # 쉬운 적용방법
 
-대쉬보드 -> 편집 -> 리소스 관리 -> 예) /hacsfiles/weather-card/weather-card.js?hacstag=192732636150 <- 숫자 하나 더 추가
+1. 대쉬보드 -> 편집 -> 리소스 관리
+2. 예) /hacsfiles/weather-card/weather-card.js?hacstag=192732636150 선택
+3. hacstag=192732636150 <- 숫자 하나 더 추가
 <br>※ 브라우저 캐시 삭제 안해도 됩니다.
 
-**Special Thanks**
 
-HACS 네이버 날씨 제작자 miumida님
 
 
 
