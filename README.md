@@ -37,6 +37,9 @@ HACS 네이버 날씨 제작자 miumida님
 
 기기 및 서비스 -> 네이버 날씨 -> 구성요소에 들어가 센서 값을 'sensor.naver~' 로 다시 수정하는 걸 권장함.
 
+![image](https://github.com/plplaaa2/HA-weather-card-custom/assets/124797654/bf9cdd58-a41e-439f-b35d-f1776ff557c1)
+
+
 
 # 설치방법
 
