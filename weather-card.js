@@ -274,7 +274,7 @@ class WeatherCard extends LitElement {
           )}') no-repeat; background-size: contain;"
           >${stateObj.state}
         </span>
-       <span class="title">${this.hass.states["sensor.naver_weather_nowweather_1"].state}<br>
+       <span class="title">${this.hass.states["sensor.wn_home_current_condition"].state}<br>
 		          <span class="subinfo">
 		          ${this.hass.states["sensor.naver_weather_todaymintemp_1"].state}° / <span class="highTemp">${this.hass.states["sensor.naver_weather_todaymaxtemp_1"].state}°</span>
 		          <br>
