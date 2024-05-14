@@ -278,7 +278,7 @@ class WeatherCard extends LitElement {
 		          <span class="subinfo">
 		          습도 ${stateObj.attributes.humidity}% 
 		          <br>		          
-		          풍향 ${this.hass.states["sensor.wn_home_wind_direction_cardinal"].state} ${this.hass.states["sensor.wn_home_wind_speed"].state}<span class="unit"> m/s</span>
+		          풍향 ${this.hass.states["sensor.wn_home_wind_direction_cardinal"].state} 풍속 ${this.hass.states["sensor.wn_home_wind_speed"].state}<span class="unit"> m/s</span>
                   </span>
        </span>
         <span class="temp" style="color: ${this.hass.states["sensor.wn_home_temperature_feels_like"].state < this.hass.states["sensor.wn_home_temperature"].state ? 'rgb(0,191,255)' : this.hass.states["sensor.wn_home_temperature_feels_like"].state > this.hass.states["sensor.wn_home_temperature"].state ? 'orange' : ''};"
@@ -302,15 +302,15 @@ class WeatherCard extends LitElement {
 
     return html`
       <ul class="variations ${this.numberElements > 1 ? "spacer" : ""}">
-       ${this.hass.states["sensor.wn_home_precip_hour_today"].state !== '안옴'
+       ${this.hass.states["sensor.wn_home_precip_hour_today_tomarrow"].state !== '안옴'
             ? html`
                 <li>
 		          <ha-icon icon="${this.hass.states['sensor.wn_home_current_condition'].state !== '비' ? 'mdi:umbrella-closed-variant' : 'mdi:umbrella'}" style="color: rgb(224, 161, 49)"></ha-icon>
-                  <span style="color: ${this.hass.states["sensor.wn_home_precip_hour_today"].state !== '안옴' ? 'rgb(224, 161, 49)' : ''};"> ${this.hass.states["sensor.wn_home_precip_hour_today"].state} 비 내림</span>
+                  <span style="color: ${this.hass.states["sensor.wn_home_precip_hour_today_tomarrow"].state !== '안옴' ? 'rgb(224, 161, 49)' : ''};"> ${this.hass.states["sensor.wn_home_precip_hour_today_tomarrow"].state} 내림</span>
                 </li>
               `
             : ""}
-		${this.hass.states["sensor.wn_home_precip_hour_today"].state !== '비안옴'
+		${this.hass.states["sensor.wn_home_precip_hour_today_tomarrow"].state !== '안옴'
             ? html`
                 <li>
                   <ha-icon icon="${this.hass.states['sensor.wn_home_precipitation_probability'].state <= 30 ? 'mdi:weather-cloudy' : 'mdi:weather-pouring'}" style="color: rgb(224, 161, 49)"></ha-icon>
@@ -323,11 +323,11 @@ class WeatherCard extends LitElement {
           미세먼지 ${this.hass.states["sensor.wn_home_pm10_description"].state}
         </li>
         <li>
-          <ha-icon icon="mdi:sun-wireless-outline" style="color: ${this.hass.states["sensor.wn_home_uv_index"].state <= '2' ? 'rgb(13, 93, 148)' : this.hass.states["sensor.wn_home_uv_index"].state >= '3' && this.hass.states["sensor.wn_home_uv_index"].state <= '4' ? 'rgb(13, 187, 74)' : this.hass.states["sensor.wn_home_uv_index"].state >= '5' && this.hass.states["sensor.wn_home_uv_index"].state <= '7' ? 'rgb(224, 161, 49)' : this.hass.states["sensor.wn_home_uv_index"].state >= '8' && this.hass.states["sensor.wn_home_uv_index"].state <= '9' ? 'red' : this.hass.states["sensor.wn_home_uv_index"].state >= '10' ? 'violet' : 'rgba(255, 255, 255, 0)'};"></ha-icon>
+          <ha-icon icon="mdi:sun-wireless-outline" style="color: ${this.hass.states["sensor.wn_home_uv_index"].state <= '3' ? 'rgb(13, 93, 148)' : this.hass.states["sensor.wn_home_uv_index"].state >= '4' && this.hass.states["sensor.wn_home_uv_index"].state <= '5' ? 'rgb(13, 187, 74)' : this.hass.states["sensor.wn_home_uv_index"].state >= '6' && this.hass.states["sensor.wn_home_uv_index"].state <= '7' ? 'rgb(224, 161, 49)' : this.hass.states["sensor.wn_home_uv_index"].state <= '8' ? 'red' : 'rgba(255, 255, 255, 0)'};"></ha-icon>
           자외선 ${this.hass.states["sensor.wn_home_uv_index"].state}
         </li>
         <li>
-          <ha-icon icon="mdi:blur-linear" style="color: ${this.hass.states["sensor.wn_home_pm2_5_description"].state === '좋음' ? 'rgb(13, 93, 148)' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '보통' ? 'rgb(13, 187, 74)' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '나쁨' ? 'rgb(224, 161, 49)' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '매우나쁨' ? 'red' : 'rgba(255, 255, 255, 0)'};"></ha-icon>
+          <ha-icon icon="mdi:blur-linear" style="color: ${this.hass.states["sensor.wn_home_pm2_5_description"].state === '좋음' ? 'blue' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '보통' ? 'green' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '나쁨' ? 'orange' : this.hass.states["sensor.wn_home_pm2_5_description"].state === '매우나쁨' ? 'red' : 'rgba(255, 255, 255, 0)'};"></ha-icon>
           초미세먼지 ${this.hass.states["sensor.wn_home_pm2_5_description"].state}
         </li>
         <li>
