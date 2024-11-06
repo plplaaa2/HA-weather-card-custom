@@ -43,11 +43,9 @@ Thanks for all picking this card up.
 ## 설치방법
 
 1. [네이버 날씨](https://github.com/miumida/naver_weather)설치
-   
    **Special Thanks** HACS 네이버 날씨 제작자 miumida님
-   
-4. 기존 weather-card 삭제(중복이라)
-5. Weather-card 설치 ( HACS -> frontend -> : -> custom repositories)
+2. 기존 weather-card 삭제(중복이라)
+3. Weather-card 설치 ( HACS -> frontend -> : -> custom repositories)
 ```yaml
    repositories : https://github.com/plplaaa2/weather-card
    category : lovelace
